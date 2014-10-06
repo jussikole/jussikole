@@ -1,0 +1,10 @@
+.filters
+
+  %button.filter-button(type='button' ng-repeat='filter in filters' ng-class='{active: activeFilter.name == filter.name}' ng-click='toggleFilter(filter)')
+    %span(ng-bind='filter.name')
+    
+  .clearfix
+  
+  .values(ng-if='activeFilter')
+    %a.technology(href='' ng-repeat='value in activeFilter.values' ng-click='toggleValue(value)' ng-class="{'tag-selected': isValueSelected(value)}")
+      {{ value.name }} ({{ value.count }})

@@ -1,0 +1,7 @@
+.sorters
+
+  %button.sorter-button(type='button' ng-repeat='sorter in sorters' ng-class="{active: activeSorter.name == sorter.name}" ng-click='selectSorter(sorter)')
+    %span(ng-bind='sorter.name')
+    %span.icon(ng-class="{'icon-sort-up': activeSorter.name == sorter.name && !sorter.reverse, 'icon-sort-down': activeSorter.name == sorter.name && sorter.reverse}")
+    
+  .clearfix

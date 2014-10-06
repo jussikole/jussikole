@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    %title
+      jussikole
+    //%link(href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css')
+    %link(href='styles/jk.css' rel='stylesheet')
+  
+  %body(ng-app='JKApp')
+    #content(ng-view)
+    #scripts
+      - %w(lib/angular lib/angular-route lib/angular-scroll lib/angular-parallax lib/d3 lib/topojson app main).each do |script|
+        %script(type='text/javascript' src="scripts/#{script}.js")

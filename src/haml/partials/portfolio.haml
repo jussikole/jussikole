@@ -1,0 +1,10 @@
+#portfolio
+  #portfolio-inner(ng-controller='PortfolioController')
+    .portfolio-filters
+      .heading
+        Filter & sort
+      .body
+        .sorters(jk-project-sorter sorters='sorters' active-sorter='activeSorter')
+        .filters(jk-project-filter filters='filters' active-filter='activeFilter')
+
+    .project(jk-project ng-repeat='project in projects | filterProjects:activeFilter | sortProjects:activeSorter' project='project')

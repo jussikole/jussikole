@@ -1,0 +1,11 @@
+<div class='filters'>
+  <button class='filter-button' ng-class='{active: activeFilter.name == filter.name}' ng-click='toggleFilter(filter)' ng-repeat='filter in filters' type='button'>
+    <span ng-bind='filter.name'></span>
+  </button>
+  <div class='clearfix'></div>
+  <div class='values' ng-if='activeFilter'>
+    <a class='technology' href='' ng-class="{'tag-selected': isValueSelected(value)}" ng-click='toggleValue(value)' ng-repeat='value in activeFilter.values'>
+      {{ value.name }} ({{ value.count }})
+    </a>
+  </div>
+</div>

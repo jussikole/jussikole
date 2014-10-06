@@ -1,0 +1,24 @@
+{
+  "name": "jussikolefi_v4",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-coffee": "^0.10.1",
+    "grunt-contrib-haml": "^0.2.0",
+    "grunt-contrib-less": "^0.11.1",
+    "grunt-contrib-copy": "^0.5.0",
+    "express": "^4.6.1",
+    "path": "^0.4.9",
+    "mongodb": "^1.4.7",
+    "coffee": "0.0.1",
+    "nodemon": "^1.2.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "monk": "^0.9.0",
+    "mongoose": "^3.8.14",
+    "body-parser": "^1.6.3",
+    "restify": "^2.8.2",
+    "instagram-node": "^0.5.1"
+  },
+  "author": "Jussi Kolehmainen",
+  "version": "0.0.0"
+}

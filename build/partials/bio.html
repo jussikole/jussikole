@@ -1,0 +1,32 @@
+<div id='bio'>
+  <div id='bio-inner' ng-controller='BioController'>
+    <div class='view-loader' jk-view-loader ng-show='loading' text='loading bio'></div>
+    <div exec-once='true' id='bio-tiles' jk-scroll-load>
+      <div class='bio-tiles-inner'>
+        <div class='tile-row-1-2'>
+          <div class='tile-wrapper-1-4 tile-wrapper-high' index='1' jk-bio-tile tile='tiles[0]'></div>
+          <div class='tile-wrapper-1-2'>
+            <div class='tile-row-1-2'>
+              <div class='tile-wrapper-1-2' index='2' jk-bio-tile tile='tiles[1]'></div>
+              <div class='tile-wrapper-1-2' index='3' jk-bio-tile tile='tiles[2]'></div>
+            </div>
+            <div class='tile-row-1-2'>
+              <div class='tile-wrapper-1' index='4' jk-bio-tile tile='tiles[3]'></div>
+            </div>
+          </div>
+          <div class='tile-wrapper-1-4 tile-wrapper-high' index='5' jk-bio-tile tile='tiles[4]'></div>
+        </div>
+        <div class='tile-row-1-4'>
+          <div class='tile-wrapper-1-4' index='6' jk-bio-tile tile='tiles[5]'></div>
+          <div class='tile-wrapper-1-4' index='7' jk-bio-tile tile='tiles[6]'></div>
+          <div class='tile-wrapper-1-2' index='8' jk-bio-tile tile='tiles[7]'></div>
+        </div>
+        <div class='tile-row-1-4'>
+          <div class='tile-wrapper-1-2' index='9' jk-bio-tile tile='tiles[8]'></div>
+          <div class='tile-wrapper-1-4' index='10' jk-bio-tile tile='tiles[9]'></div>
+          <div class='tile-wrapper-1-4' index='11' jk-bio-tile tile='tiles[10]'></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

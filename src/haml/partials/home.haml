@@ -1,0 +1,22 @@
+#home
+
+
+
+  #home-inner(ng-controller='HomeController' parallax-background='0.5')
+  
+    %header
+      %h1.name
+        Jussi Kolehmainen
+      .welcome
+        %p
+          and welcome to my world!
+          
+    #home-menu
+      %ul
+        - %w(bio travel social skills travel portfolio).each do |page|
+          %li
+            %a(href="#/#{page}/")
+              = page
+
+.bio-container(ng-include src="'partials/bio.html'")
+

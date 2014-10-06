@@ -1,0 +1,33 @@
+<div class='project'>
+  <div class='heading'>
+    <div class='title'>
+      <h3 ng-bind='project.name' ng-click='toggle()'></h3>
+    </div>
+    <div class='time'>
+      <span ng-bind='project.time | projectTimeFormat' ng-click='toggle()'></span>
+    </div>
+    <div class='toggle'>
+      <a href='' ng-click='toggle()' ng-if='!opened'>
+        <span class='glyphicon glyphicon-plus'></span>
+      </a>
+      <a href='' ng-click='toggle()' ng-if='opened'>
+        <span class='glyphicon glyphicon-minus'></span>
+      </a>
+    </div>
+  </div>
+  <div class='body'>
+    <div class='content' ng-class="{'hidden': !opened}">
+      <div class='role'>
+        <span>Role:</span>
+        <span ng-bind='project.role'></span>
+      </div>
+      <div class='technologies'>
+        <a class='technology' ng-bind='technology' ng-repeat='technology in project.technologies'></a>
+      </div>
+      <div class='description' ng-bind='project.description'></div>
+      <ul class='tasks' ng-class="{'hidden': !opened}">
+        <li ng-bind='task' ng-repeat='task in project.tasks'></li>
+      </ul>
+    </div>
+  </div>
+</div>

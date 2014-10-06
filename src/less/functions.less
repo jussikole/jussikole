@@ -1,0 +1,32 @@
+@import "common.less";
+
+@width-sm: 568px;
+@width-md: 768px;
+@width-lg: 1024px;
+@width-xl: 1280px;
+
+.make-bg-image(@path, @pos1:50%, @pos2:50%) {
+  background-image: url(@path);
+  background-repeat: no-repeat;
+  background-position: @pos1 @pos2;
+  background-position: 50% 50%9 !important;
+}
+
+.make-bg-image-pos(@min-width, @pos1, @pos2) {
+  @media screen and (min-width: @min-width) {
+    background-position: @pos1 @pos2;
+  }
+}
+
+.make-bg-image-pos-sm(@pos1, @pos2) {
+  .make-bg-image-pos(@width-sm, @pos1, @pos2);
+}
+.make-bg-image-pos-md(@pos1, @pos2) {
+  .make-bg-image-pos(@width-md, @pos1, @pos2);
+}
+.make-bg-image-pos-lg(@pos1, @pos2) {
+  .make-bg-image-pos(@width-lg, @pos1, @pos2);
+}
+.make-bg-image-pos-xl(@pos1, @pos2) {
+  .make-bg-image-pos(@width-xl, @pos1, @pos2);
+}

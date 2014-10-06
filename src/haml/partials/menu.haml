@@ -1,0 +1,7 @@
+
+.front-menu-inner
+  .empty-tile
+  - %w(bio travel social portfolio).each do |view|        
+    %a.tile(href="##{view}-inner" du-smooth-scroll)
+      .tile-name= view
+      %span.tile-icon.glyphicon.glyphicon-chevron-down

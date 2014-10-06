@@ -1,0 +1,7 @@
+.bio-tile(ng-class="'bio-tile-' + index" ng-if='tile')
+  .tile-bg(ng-style="{'background-position': tile.image.pos[0] + '% ' + tile.image.pos[1] + '%'}" jk-lazy-bg='{{tile.image.name}}')
+  .overlay
+  .text-wrapper(ng-style='{color: tile.color}')
+    %span.text(ng-bind='tile.text')
+  .location-wrapper
+    %span.location(ng-bind='tile.image.location')

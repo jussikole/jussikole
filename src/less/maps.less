@@ -1,0 +1,36 @@
+
+
+.make-country(@color) {
+  fill: @color;
+  &:hover {
+    fill: darken(@color, 20%);
+  }
+}
+
+
+path.country {
+  .make-country(#AEB691);
+  z-index: 2000;
+}
+
+path.country-visited {
+  .make-country(#90AC96);
+  z-index: 300;
+}
+
+path.country-current {
+  .make-country(#E7AC74);
+  z-index: 4000;
+}
+
+path.place {
+  fill: #E36532;
+  z-index: 100;
+}
+
+path.sphere {
+  fill: #034885;
+  stroke: white;
+  stroke-width: 3px;
+  z-index: 10;
+}

@@ -1,0 +1,34 @@
+.project
+
+  .heading
+  
+    .title
+      %h3(ng-bind='project.name' ng-click='toggle()')
+      
+    .time
+      %span(ng-bind='project.time | projectTimeFormat' ng-click='toggle()')
+      
+    .toggle
+      %a(href='' ng-if='!opened' ng-click='toggle()')
+        %span.glyphicon.glyphicon-plus
+      %a(href='' ng-if='opened' ng-click='toggle()')
+        %span.glyphicon.glyphicon-minus
+     
+      
+      
+  .body
+    .content(ng-class="{'hidden': !opened}")
+    
+      .role
+        %span= 'Role: ' 
+        %span(ng-bind='project.role')     
+        
+      .technologies
+        %a.technology(ng-repeat='technology in project.technologies' ng-bind='technology')
+        
+      .description(ng-bind='project.description') 
+      
+      %ul.tasks(ng-class="{'hidden': !opened}")
+        %li(ng-repeat='task in project.tasks' ng-bind='task')
+
+  

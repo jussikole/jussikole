@@ -1,0 +1,10 @@
+<div class='bio-tile' ng-class="'bio-tile-' + index" ng-if='tile'>
+  <div class='tile-bg' jk-lazy-bg='{{tile.image.name}}' ng-style="{'background-position': tile.image.pos[0] + '% ' + tile.image.pos[1] + '%'}"></div>
+  <div class='overlay'></div>
+  <div class='text-wrapper' ng-style='{color: tile.color}'>
+    <span class='text' ng-bind='tile.text'></span>
+  </div>
+  <div class='location-wrapper'>
+    <span class='location' ng-bind='tile.image.location'></span>
+  </div>
+</div>

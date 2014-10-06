@@ -1,0 +1,7 @@
+<div class='sorters'>
+  <button class='sorter-button' ng-class='{active: activeSorter.name == sorter.name}' ng-click='selectSorter(sorter)' ng-repeat='sorter in sorters' type='button'>
+    <span ng-bind='sorter.name'></span>
+    <span class='icon' ng-class="{'icon-sort-up': activeSorter.name == sorter.name &amp;&amp; !sorter.reverse, 'icon-sort-down': activeSorter.name == sorter.name &amp;&amp; sorter.reverse}"></span>
+  </button>
+  <div class='clearfix'></div>
+</div>

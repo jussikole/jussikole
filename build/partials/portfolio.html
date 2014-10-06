@@ -1,0 +1,14 @@
+<div id='portfolio'>
+  <div id='portfolio-inner' ng-controller='PortfolioController'>
+    <div class='portfolio-filters'>
+      <div class='heading'>
+        Filter & sort
+      </div>
+      <div class='body'>
+        <div active-sorter='activeSorter' class='sorters' jk-project-sorter sorters='sorters'></div>
+        <div active-filter='activeFilter' class='filters' filters='filters' jk-project-filter></div>
+      </div>
+    </div>
+    <div class='project' jk-project ng-repeat='project in projects | filterProjects:activeFilter | sortProjects:activeSorter' project='project'></div>
+  </div>
+</div>

@@ -6547,8 +6547,7 @@ div {
   height: 100%;
 }
 #social #title {
-  line-height: 3em;
-  padding-left: 1em;
+  padding: 1em;
   color: white;
 }
 .loader {

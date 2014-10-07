@@ -1,4 +1,10 @@
 #social
-  .social-title(jk-view-title text="'Social'")
-  #social-inner(ng-controller='SocialController')
+  #title
+    %a(href='/')
+      Back
+    Instagram: jussikole.
+    Click images to change the active image.
+  #social-inner
     #instagram-feed
+      .loader
+        Loading...

@@ -61,7 +61,7 @@ getImages = function() {
     ny: {
       name: 'bio_ny_640.jpg',
       location: 'New York, USA',
-      pos: [20, 40]
+      pos: [0, 0]
     },
     fiji: {
       name: 'bio_fiji_640.jpg',

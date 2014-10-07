@@ -6539,10 +6539,25 @@ div {
 #bio-tiles .bio-tile span.location:hover {
   display: block;
 }
+#social {
+  height: 100%;
+  background-color: black;
+}
 #social #social-inner {
-  background-color: #36454C;
+  height: 100%;
+}
+#social #title {
+  line-height: 3em;
+  padding-left: 1em;
+  color: white;
+}
+.loader {
+  padding: 1em;
+  color: white;
 }
 .image-feed {
+  height: 100%;
+  width: 100%;
   background-color: black;
 }
 .image-feed .image {
@@ -6679,8 +6694,9 @@ div {
   min-height: 200px;
   background-image: url("../images/home_1920.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 20%;
+  background-position: 50% 35%;
   background-position: 50% 50%9 !important;
+  background-attachment: fixed;
   padding: 2%;
   position: relative;
 }

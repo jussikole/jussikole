@@ -19,7 +19,7 @@ getImages = () -> {
   whitsunday: { name: 'bio_whitsunday_640.jpg', location: 'Whitsundays, Australia', pos: [50,50]  }
   chichen: { name: 'bio_chichen_640.jpg', location: 'Chichen Itza, Mexico', pos: [50,50]  }
   hcr: { name: 'bio_hcr_640.jpg', location: 'Helsinki, Finland', pos: [50,50]  }
-  ny: { name: 'bio_ny_640.jpg', location: 'New York, USA', pos: [20,40] }
+  ny: { name: 'bio_ny_640.jpg', location: 'New York, USA', pos: [0,0] }
   fiji: { name: 'bio_fiji_640.jpg', location: 'Fiji Islands', pos: [50,50]  }
 }
   

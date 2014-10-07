@@ -65,10 +65,10 @@ angular.module('JKApp.skills').controller('SkillsController', function() {});
 angular.module('JKApp.social').controller('SocialController', function($scope, $window, SocialService, SocialFactory) {
   var load;
   load = function() {
-    console.log('asd');
     return SocialService.getInstagramImages().then(function(response) {
       var instagramFeed;
       instagramFeed = new SocialFactory.ImageFeed(response.data.medias, $window.innerWidth);
+      angular.element(document.getElementById('instagram-feed')).empty();
       instagramFeed.draw('#instagram-feed');
       return angular.element($window).on('resize', function() {
         return instagramFeed.resize($window.innerWidth);

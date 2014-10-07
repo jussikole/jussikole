@@ -1,1 +1,1 @@
-web: nodemon node/server.coffee
+web: node node/server.js

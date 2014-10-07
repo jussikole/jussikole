@@ -1,6 +1,5 @@
 express = require 'express'
 path = require 'path'
-bodyParser = require 'body-parser'
 port = 80
 app = express()
 instagram = require './api/instagram'

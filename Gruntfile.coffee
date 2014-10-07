@@ -7,7 +7,7 @@ module.exports = (grunt) ->
       css:
         src: ['build/styles']
       js:
-        src: ['build/scripts']
+        src: ['build/scripts', 'server']
     haml:
       compile:
         expand: true
@@ -23,6 +23,15 @@ module.exports = (grunt) ->
         files:
           'build/scripts/main.js': ['src/coffee/main.coffee']
           'build/scripts/app.js': ['src/coffee/app/**/*.coffee']
+      compileServer:
+        options:
+          bare: true
+        expand: true
+        flatten: false
+        cwd: 'src/server'
+        src: '**/*.coffee'
+        dest: 'server/'
+        ext: '.js'
     less:
       compile:
         files:

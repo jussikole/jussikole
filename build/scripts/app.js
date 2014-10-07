@@ -652,7 +652,7 @@ angular.module('JKApp.travel').factory('TravelFactory', function($timeout) {
       this.placeLine = null;
       return d3.json(this.jsonPath, (function(_this) {
         return function(err, world) {
-          var divs, i, nextPlace;
+          var divs;
           _this.gCountries.selectAll('path.country').data(topojson.feature(world, world.objects.countries).features).enter().append('path').attr('class', function(country) {
             return _this.getCountryClass(country);
           }).attr('d', _this.path);
@@ -661,17 +661,11 @@ angular.module('JKApp.travel').factory('TravelFactory', function($timeout) {
           }).attr('d', _this.path).on('click', function(place) {
             return _this.rotateToPlace(place.id);
           });
-          divs = _this.divPlaces.selectAll('div.place').data(_this.data.places).enter().append('div').attr('class', 'place').append('a').attr('href', '#/travel').text(function(p) {
+          divs = _this.divPlaces.selectAll('div.place').data(_this.data.places).enter().append('div').attr('class', 'place').append('a').text(function(p) {
             return p.name;
           }).on('click', function(place) {
             return _this.rotateToPlace(place.id);
           });
-          i = 0;
-          nextPlace = function() {
-            _this.rotateToPlace(_this.data.places[i]);
-            i = (i + 1) % _this.data.places.length;
-            return $timeout(nextPlace, 10000);
-          };
           return _this.rotateToPlace(_this.data.currentPlaceIndex);
         };
       })(this));

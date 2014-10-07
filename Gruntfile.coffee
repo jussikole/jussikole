@@ -59,6 +59,7 @@ module.exports = (grunt) ->
         cwd: 'bower_components/'
         src: [
           'bootstrap/fonts/*'
+          'fontawesome/fonts/*'
         ]
         dest: 'build/fonts'
       images:
@@ -77,6 +78,14 @@ module.exports = (grunt) ->
           '*.json'
         ]
         dest: 'build/json'  
+      css:
+        expand: true
+        flatten: true
+        cwd: 'bower_components/'
+        src: [
+          'fontawesome/css/font-awesome.css'
+        ]
+        dest: 'build/styles'  
     watch:
         coffee:
             files: ['src/coffee/**/*.coffee']

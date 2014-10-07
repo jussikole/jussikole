@@ -124,11 +124,6 @@ angular.module 'JKApp.travel'
         @divPlaces = body.select '#travel-places'
           .append 'div'
             .attr 'class', 'travel-places-inner'
-            
-
-            
-            
-
            
         @placeLine = null
       
@@ -157,20 +152,9 @@ angular.module 'JKApp.travel'
             .append 'div'
               .attr 'class', 'place'
             .append 'a'
-              .attr 'href', '#/travel'
               .text (p) -> p.name
             .on 'click', (place) =>
               @rotateToPlace place.id
-              
-
-                
-          i = 0
-          nextPlace = =>
-            @rotateToPlace @data.places[i]
-            i = (i+1) % @data.places.length
-            $timeout nextPlace, 10000
-                 
-          #nextPlace()
           
           @rotateToPlace @data.currentPlaceIndex
            
@@ -212,13 +196,11 @@ angular.module 'JKApp.travel'
         
       updateMap: () =>
         @sphere
-          .attr 'd', @path
-        
+          .attr 'd', @path       
         @gCountries.selectAll 'path.country'
           .attr 'd', (o) => @path(o) || 'M0,0'
         @gPlaces.selectAll 'path.place'
-          .attr 'd', (o) => @path(o) || 'M0,0'
-              
+          .attr 'd', (o) => @path(o) || 'M0,0'              
         @divPlaces.selectAll 'div.place'
           .attr 'class', (place) => @getPlaceClass place
             

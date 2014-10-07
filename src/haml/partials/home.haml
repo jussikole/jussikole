@@ -9,10 +9,23 @@
             %a(href='#/portfolio')
               Portfolio
           %li
-            %a(href='#/demos')
-              Demos
-  #whoami
-    %a(href='' ng-click='scrollToBiosss()')
+            %a(href='#/travel')
+              Travel
+              
+      #links
+        %ul
+          %li
+            %a(href='http://facebook.com/kolehmainen')
+              %i.fa.fa-2x.fa-facebook
+          %li
+            %a(href='https://www.linkedin.com/profile/view?id=126103559')
+              %i.fa.fa-2x.fa-linkedin
+          %li
+            %a(href='https://github.com/jusssi')
+              %i.fa.fa-2x.fa-github
+            
+  #whoami(ng-click='scrollToBio()')
+    %a(href='')
       Who Am I?
 .bio-container(ng-include src="'partials/bio.html'")
 

@@ -6699,38 +6699,38 @@ div {
   padding: 2%;
   position: relative;
 }
-#home #home-inner #content {
+#home #home-inner #home-content {
   position: absolute;
   top: 45%;
   left: 10%;
 }
-#home #home-inner #content #title {
+#home #home-inner #home-content #title {
   font-family: 'Raleway', sans-serif;
   font-size: 2em;
 }
 @media screen and (min-width: 992px) {
-  #home #home-inner #content #title {
+  #home #home-inner #home-content #title {
     font-size: 3em;
   }
 }
-#home #home-inner #content #menu ul,
-#home #home-inner #content #links ul {
+#home #home-inner #home-content #menu ul,
+#home #home-inner #home-content #links ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#home #home-inner #content #menu li,
-#home #home-inner #content #links li {
+#home #home-inner #home-content #menu li,
+#home #home-inner #home-content #links li {
   text-transform: uppercase;
   display: inline-block;
   margin-right: 20px;
 }
-#home #home-inner #content #menu li a,
-#home #home-inner #content #links li a {
+#home #home-inner #home-content #menu li a,
+#home #home-inner #home-content #links li a {
   text-decoration: none;
   color: #000000;
 }
-#home #home-inner #content #links {
+#home #home-inner #home-content #links {
   margin-top: 3em;
 }
 #whoami {

@@ -8,6 +8,7 @@ bio = require './data/bio'
 
 
 app.use express.static path.join(__dirname, '../build')
+
 app.get '/ig', instagram.getRecentMedia
 app.get '/bio', bio.getBio
 

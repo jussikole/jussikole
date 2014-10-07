@@ -4,7 +4,7 @@ express = require('express');
 
 path = require('path');
 
-port = 1235;
+port = process.env.PORT || 5000;
 
 app = express();
 

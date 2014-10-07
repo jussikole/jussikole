@@ -36,23 +36,20 @@ app.config(function($routeProvider) {
 
 angular.module('JKApp.bio').controller('BioController', function($scope, BioService) {
   $scope.tiles = [];
-  $scope.loading = false;
-  $scope.loaded = false;
-  return $scope.load = function() {
-    if ($scope.loaded) {
-      return;
-    }
-    $scope.loading = true;
-    return BioService.getBioTiles().then(function(data) {
-      $scope.tiles = data.data.tiles;
-      $scope.loading = false;
-      return $scope.loaded = true;
-    });
-  };
+  $scope.loading = true;
+  return BioService.getBioTiles().then(function(data) {
+    $scope.tiles = data.data.tiles;
+    return $scope.loading = false;
+  });
 });
 
-angular.module('JKApp.home').controller('HomeController', function($scope) {
-  return $scope.test = 123;
+angular.module('JKApp.home').controller('HomeController', function($scope, $document) {
+  return $scope.scrollTopBio = function() {
+    var element;
+    element = angular.element(document.getElementById('bio'));
+    console.log(element);
+    return $document.scrollToElementAnimated(element);
+  };
 });
 
 angular.module('JKApp.portfolio').controller('PortfolioController', function($scope, PortfolioService) {

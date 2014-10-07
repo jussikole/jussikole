@@ -1,5 +1,4 @@
-<div class='bio-tile' ng-class="'bio-tile-' + index" ng-if='tile'>
-  <div class='tile-bg' jk-lazy-bg='{{tile.image.name}}' ng-style="{'background-position': tile.image.pos[0] + '% ' + tile.image.pos[1] + '%'}"></div>
+<div class='bio-tile' jk-lazy-bg='{{tile.image.name}}' ng-class="'bio-tile-' + index" ng-if='tile' ng-style="{'background-position': tile.image.pos[0] + '% ' + tile.image.pos[1] + '%'}">
   <div class='overlay'></div>
   <div class='text-wrapper' ng-style='{color: tile.color}'>
     <span class='text' ng-bind='tile.text'></span>

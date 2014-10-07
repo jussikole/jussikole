@@ -1,61 +1,84 @@
 @import "../functions.less";
 
 #home {
-  height: 100%;
+  
+  height: 80%;
+  padding: 1em;
   #home-inner {
+    
     height: 100%;
     min-height: 200px;
     .make-bg-image("../images/home_1920.jpg", 50%, 20%);
-    padding: 5%;
+    padding: 2%;
+    position: relative;
+    
+    #content {
+      position: absolute;
+      top: 45%;
+      left: 10%;
+      #title {
+        font-family: 'Raleway', sans-serif;
+
+        font-size: 2em;
+     
+        @media screen and (min-width: @screen-md) {
+          & {
+            font-size: 3em;
+          }
+        }
+      }
+      
+      #menu {
+        
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        
+        li {
+          text-transform: uppercase;
+          display: inline-block;
+          margin-right: 20px;
+          
+          a {
+            text-decoration: none;
+            color: #000000;
+          }
+        }
+      }
+    }
   }
+  position: relative;
 }
 
-header {
-  margin-top: 20%;
-  color: white;
-  width: 100%;
-  .name {
-    margin: 0;
-    font-size: 3em;
-    font-weight: bold;
-  }
+#whoami {
+  font-family: 'Raleway', sans-serif;
+  width: 70%;
+  left: 15%;
+  bottom: 0;
+  position: absolute;
+  background-color: white;
+  margin-bottom: -0.75em;
+  font-size: 2em;
+  line-height: 2em;
+  text-align: center;
   
-  .welcome {
-    font-size: 1.2em;
-    color: white;
-    background-color: rgba(0,0,0,0.4);
-    max-width: 500px;
-    padding: 0.5em;
+  a {
+    text-decoration: none;
+    color: black;
+    
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
   }
-  
   
   @media screen and (min-width: @width-md) {
-    & {
-      .name {
-        font-size: 3em;
-        margin-bottom: 20px;
-      }
-      .welcome {
-        font-size: 1.2em;
-      }
-    }
-  }
-}
-
-#home-menu {
-  max-width: 400px;
-  .make-row();
-  ul {
-    list-style: none;
-    li {
-      .make-xs-column(12);
-      
-      a {
-        color: white;
-        width: 100%;
-        height: 100%;
-      }
-    }
+    width: 30%;
+    left: 35%;
+    font-size: 2em;
+    line-height: 2em;
   }
 }
 

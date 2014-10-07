@@ -5901,16 +5901,10 @@ button.close {
 .portfolio-filters .body:after,
 .portfolio-filters .project .body:before,
 .portfolio-filters .project .body:after,
-#bio #bio-inner:before,
-#bio #bio-inner:after,
-#bio-tiles .tile-row-1-2:before,
-#bio-tiles .tile-row-1-2:after,
-#bio-tiles .tile-row-1-4:before,
-#bio-tiles .tile-row-1-4:after,
+#bio-tiles .bio-tiles-inner:before,
+#bio-tiles .bio-tiles-inner:after,
 #travel #travel-inner:before,
-#travel #travel-inner:after,
-#home-menu:before,
-#home-menu:after {
+#travel #travel-inner:after {
   content: " ";
   display: table;
 }
@@ -5931,11 +5925,8 @@ button.close {
 .modal-footer:after,
 .portfolio-filters .body:after,
 .portfolio-filters .project .body:after,
-#bio #bio-inner:after,
-#bio-tiles .tile-row-1-2:after,
-#bio-tiles .tile-row-1-4:after,
-#travel #travel-inner:after,
-#home-menu:after {
+#bio-tiles .bio-tiles-inner:after,
+#travel #travel-inner:after {
   clear: both;
 }
 .center-block {
@@ -6616,103 +6607,61 @@ div {
 }
 #bio {
   padding: 1em;
+  padding-top: 8em;
   background-image: -webkit-linear-gradient(top, #282828 0%, #080808 100%);
   background-image: -o-linear-gradient(top, #282828 0%, #080808 100%);
   background-image: linear-gradient(to bottom, #282828 0%, #080808 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff282828', endColorstr='#ff080808', GradientType=0);
 }
-#bio #bio-inner {
-  margin-left: 0;
-  margin-right: 0;
-}
 #bio-tiles {
+  font-family: 'Raleway', sans-serif;
   width: 100%;
   height: 100%;
 }
 #bio-tiles .bio-tiles-inner {
-  margin: 0 auto;
   height: auto;
-  max-width: 420px;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  margin: 0 auto;
 }
-#bio-tiles .tile-row-1-2 {
-  margin-left: 0;
-  margin-right: 0;
-}
-#bio-tiles .tile-row-1-4 {
-  margin-left: 0;
-  margin-right: 0;
-}
-#bio-tiles .tile-wrapper-1-4 {
+#bio-tiles .bio-tile-wrapper {
   float: left;
   width: 100%;
   position: relative;
   min-height: 1px;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 200px;
   height: 100%;
-  max-width: 420px;
 }
 @media (min-width: 768px) {
-  #bio-tiles .tile-wrapper-1-4 {
-    float: left;
-    width: 25%;
-  }
-}
-#bio-tiles .tile-wrapper-1-2 {
-  float: left;
-  width: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  margin: 0 auto;
-  height: 100%;
-  max-width: 420px;
-}
-@media (min-width: 768px) {
-  #bio-tiles .tile-wrapper-1-2 {
+  #bio-tiles .bio-tile-wrapper {
     float: left;
     width: 50%;
   }
 }
-#bio-tiles .tile-wrapper-1 {
-  float: left;
-  width: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  margin: 0 auto;
-  height: 100%;
-  max-width: 420px;
-}
-@media (min-width: 768px) {
-  #bio-tiles .tile-wrapper-1 {
+@media (min-width: 992px) {
+  #bio-tiles .bio-tile-wrapper {
     float: left;
-    width: 100%;
+    width: 25%;
   }
 }
 #bio-tiles .bio-tile {
-  min-height: 200px;
-  height: 100%;
-  position: relative;
-}
-#bio-tiles .bio-tile .tile-bg {
+  width: auto;
+  height: auto;
   background-repeat: no-repeat;
   background-size: auto auto;
-  background-position: 50% 50%9 !important;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-position: 50% 50% !important;
   z-index: 700;
+  position: relative;
+  min-height: 200px;
+  margin-bottom: 2em;
 }
 #bio-tiles .bio-tile .overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -6730,17 +6679,11 @@ div {
 }
 #bio-tiles .bio-tile .text-wrapper {
   position: absolute;
-  top: 1%;
-  width: 100%;
-  height: 100%;
   z-index: 999;
 }
 #bio-tiles .bio-tile span.text {
-  padding-left: 0.2em;
-  padding-right: 0.2em;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.7);
-  font-weight: bold;
   text-transform: uppercase;
   width: 70%;
   font-size: 1.4em;
@@ -6757,91 +6700,10 @@ div {
   background-color: rgba(255, 255, 255, 0.4);
   color: black;
   padding: 2px;
+  display: none;
 }
-@media screen and (min-width: 768px) {
-  #bio-tiles {
-    height: 100%;
-  }
-  #bio-tiles .bio-tiles-inner {
-    height: 100%;
-  }
-  #bio-tiles .tile-row-1-2 {
-    height: 50%;
-    margin-bottom: 1em;
-  }
-  #bio-tiles .tile-row-1-4 {
-    height: 25%;
-    margin-bottom: 1em;
-  }
-  #bio-tiles .bio-tiles-inner {
-    max-width: 1280px;
-  }
-  #bio-tiles .tile-wrapper-1-4 {
-    float: left;
-    width: 100%;
-    position: relative;
-    min-height: 1px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin: 0 auto;
-    height: 100%;
-    max-width: 420px;
-  }
-  #bio-tiles .tile-wrapper-1-2 {
-    float: left;
-    width: 100%;
-    position: relative;
-    min-height: 1px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin: 0 auto;
-    height: 100%;
-    max-width: 420px;
-    max-width: 640px;
-  }
-  #bio-tiles .tile-wrapper-1 {
-    float: left;
-    width: 100%;
-    position: relative;
-    min-height: 1px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin: 0 auto;
-    height: 100%;
-    max-width: 420px;
-    max-width: 640px;
-  }
-  #bio-tiles .tile-wrapper-high {
-    min-height: 400px;
-  }
-  #bio-tiles .tile-wrapper-high .bio-tile {
-    min-height: 400px;
-  }
-  #bio-tiles .bio-tile {
-    min-height: 200px;
-    height: 100%;
-  }
-  #bio-tiles .bio-tile span.body {
-    font-size: 1.7em;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 768px) {
-  #bio-tiles .tile-wrapper-1-4 {
-    float: left;
-    width: 25%;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 768px) {
-  #bio-tiles .tile-wrapper-1-2 {
-    float: left;
-    width: 50%;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 768px) {
-  #bio-tiles .tile-wrapper-1 {
-    float: left;
-    width: 100%;
-  }
+#bio-tiles .bio-tile span.location:hover {
+  display: block;
 }
 #social #social-inner {
   background-color: #36454C;
@@ -6970,7 +6832,9 @@ div {
   display: block;
 }
 #home {
-  height: 100%;
+  height: 80%;
+  padding: 1em;
+  position: relative;
 }
 #home #home-inner {
   height: 100%;
@@ -6979,54 +6843,64 @@ div {
   background-repeat: no-repeat;
   background-position: 50% 20%;
   background-position: 50% 50%9 !important;
-  padding: 5%;
+  padding: 2%;
+  position: relative;
 }
-header {
-  margin-top: 20%;
-  color: white;
-  width: 100%;
+#home #home-inner #content {
+  position: absolute;
+  top: 45%;
+  left: 10%;
 }
-header .name {
+#home #home-inner #content #title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+}
+@media screen and (min-width: 992px) {
+  #home #home-inner #content #title {
+    font-size: 3em;
+  }
+}
+#home #home-inner #content #menu ul {
+  list-style: none;
   margin: 0;
-  font-size: 3em;
-  font-weight: bold;
+  padding: 0;
 }
-header .welcome {
-  font-size: 1.2em;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.4);
-  max-width: 500px;
-  padding: 0.5em;
+#home #home-inner #content #menu li {
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 20px;
+}
+#home #home-inner #content #menu li a {
+  text-decoration: none;
+  color: #000000;
+}
+#whoami {
+  font-family: 'Raleway', sans-serif;
+  width: 70%;
+  left: 15%;
+  bottom: 0;
+  position: absolute;
+  background-color: white;
+  margin-bottom: -0.75em;
+  font-size: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+#whoami a {
+  text-decoration: none;
+  color: black;
+}
+#whoami a:hover {
+  text-decoration: none;
+  color: black;
 }
 @media screen and (min-width: 768px) {
-  header .name {
-    font-size: 3em;
-    margin-bottom: 20px;
+  #whoami {
+    width: 30%;
+    left: 35%;
+    font-size: 2em;
+    line-height: 2em;
   }
-  header .welcome {
-    font-size: 1.2em;
-  }
-}
-#home-menu {
-  max-width: 400px;
-  margin-left: -15px;
-  margin-right: -15px;
-}
-#home-menu ul {
-  list-style: none;
-}
-#home-menu ul li {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-#home-menu ul li a {
-  color: white;
-  width: 100%;
-  height: 100%;
 }
 body,
 html {

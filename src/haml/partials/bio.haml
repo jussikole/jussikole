@@ -1,24 +1,6 @@
 #bio
   #bio-inner(ng-controller='BioController')
-    .view-loader(jk-view-loader ng-show='loading' text='loading bio')
-    #bio-tiles(jk-scroll-load exec-once='true')
+    #bio-tiles
       .bio-tiles-inner
-        .tile-row-1-2
-          .tile-wrapper-1-4.tile-wrapper-high(jk-bio-tile tile='tiles[0]' index='1')
-          .tile-wrapper-1-2
-            .tile-row-1-2
-              .tile-wrapper-1-2(jk-bio-tile tile='tiles[1]' index='2')
-              .tile-wrapper-1-2(jk-bio-tile tile='tiles[2]' index='3')
-            .tile-row-1-2
-              .tile-wrapper-1(jk-bio-tile tile='tiles[3]' index='4')
-          .tile-wrapper-1-4.tile-wrapper-high(jk-bio-tile tile='tiles[4]' index='5')
-    
-        .tile-row-1-4
-          .tile-wrapper-1-4(jk-bio-tile tile='tiles[5]' index='6')
-          .tile-wrapper-1-4(jk-bio-tile tile='tiles[6]' index='7')
-          .tile-wrapper-1-2(jk-bio-tile tile='tiles[7]' index='8')
-      
-        .tile-row-1-4
-          .tile-wrapper-1-2(jk-bio-tile tile='tiles[8]' index='9')
-          .tile-wrapper-1-4(jk-bio-tile tile='tiles[9]' index='10')
-          .tile-wrapper-1-4(jk-bio-tile tile='tiles[10]' index='11')
+        - (1..11).each do |index|
+          .bio-tile-wrapper(jk-bio-tile tile="tiles[#{index}]" index="#{index}")

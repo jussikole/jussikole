@@ -1,22 +1,18 @@
-#home
-
-
-
-  #home-inner(ng-controller='HomeController' parallax-background='0.5')
-  
-    %header
-      %h1.name
-        Jussi Kolehmainen
-      .welcome
-        %p
-          and welcome to my world!
-          
-    #home-menu
-      %ul
-        - %w(bio travel social skills travel portfolio).each do |page|
+#home(ng-controller='HomeController')
+  #home-inner
+    #content
+      #title
+        My name is Jussi
+      #menu
+        %ul
           %li
-            %a(href="#/#{page}/")
-              = page
-
+            %a(href='#/portfolio')
+              Portfolio
+          %li
+            %a(href='#/demos')
+              Demos
+  #whoami
+    %a(href='' ng-click='scrollToBiosss()')
+      Who Am I?
 .bio-container(ng-include src="'partials/bio.html'")
 

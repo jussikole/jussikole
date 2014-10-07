@@ -34,9 +34,9 @@ getTiles = () ->
     { text: 'Works at HiQ Finland', image: images.ny, color: '#A3B997' }
     { text: 'GMAT 760', image: images.fiji, color: '#FEB13E' }
     { text: 'Speaks Finnish, Swedish, English and Spanish', image: images.whitsunday, color: '#795655' }
-    { text: 'Studies Finance at Aalto University School of Business', image: images.chichen, color: '#52A7D5'  }
-    { text: '37 countries visited', image: images.hcr, color: '#D4B199' }
-    { text: '8 years experience in IT', image: images.fishing, color: '#A5D404' }
+    { text: 'Finance student at Aalto University School of Business', image: images.chichen, color: '#52A7D5'  }
+    { text: '38 countries visited', image: images.hcr, color: '#D4B199' }
+    { text: 'Half marathon 1:39', image: images.fishing, color: '#A5D404' }
   ]
   
 exports.getBio = (req, res) ->

@@ -1,4 +1,4 @@
 module.exports =
   instagram:
-    client_id: '8c86279980734064aefaadc938d930bc'
-    client_secret: '59bfbe2a48a1464faf8fd69ca8d4b193'
+    client_id: process.env.INSTAGRAM_CLIENT_ID
+    client_secret: process.env.INSTAGRAM_CLIENT_SECRET
